@@ -61,6 +61,18 @@ autocmd VimEnter * :normal :startinsert : stopinsert
 vmap <c-o> :only
 nnoremap <Enter> o<Esc>
 
+" fix common typos (sweet)
+:iabbrev adn and
+:iabbrev frmo from
+:iabbrev howevr however
+:iabbrev hwo how
+:iabbrev knwo know
+:iabbrev siad said
+:iabbrev tehn then
+:iabbrev waht what
+:iabbrev wihch which
+:iabbrev woudl would
+
 " Plugins
 call plug#begin()
 Plug 'tpope/vim-sensible'
