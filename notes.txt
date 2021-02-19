@@ -1,0 +1,8 @@
+Cool column/sorting tricks: https://jordanelver.co.uk/blog/2014/03/12/sorting-columnds-of-text-in-vim-using-sort/
+
+Align visual selection into columns
+:%!column -t
+
+Sort by the 2nd column 
+:%!sort -k2nr
+
