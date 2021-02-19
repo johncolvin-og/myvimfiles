@@ -78,6 +78,7 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'preservim/nerdcommenter'
 Plug 'vim-scripts/dbext.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'arzg/vim-colors-xcode'
