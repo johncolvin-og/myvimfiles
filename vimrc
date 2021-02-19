@@ -59,7 +59,15 @@ autocmd VimEnter * :normal :startinsert : stopinsert
 
 " key mappings
 vmap <c-o> :only
+" Enter inserts new line in normal mode
 nnoremap <Enter> o<Esc>
+" select word with <c-space>
+if !has("gui_running")
+   " Konsole interprets <c-space> as <c-@> for some reason
+   nnoremap <c-@> viw
+else
+   nnoremap <c-space> viw
+endif
 
 " fix common typos (sweet)
 :iabbrev adn and
