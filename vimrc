@@ -86,6 +86,7 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+nnoremap <leader><c-e> :NERDTreeToggle<cr>
 Plug 'preservim/nerdcommenter'
 Plug 'vim-scripts/dbext.vim'
 Plug 'itchyny/lightline.vim'
