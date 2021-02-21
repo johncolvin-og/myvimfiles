@@ -88,6 +88,8 @@ Plug 'tpope/vim-sensible'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 nnoremap <leader><c-e> :NERDTreeToggle<cr>
 Plug 'preservim/nerdcommenter'
+let g:NERDSpaceDelims = 1
+let g:NERDTrimTrailingWhitespace = 1
 Plug 'vim-scripts/dbext.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'arzg/vim-colors-xcode'
