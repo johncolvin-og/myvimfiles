@@ -68,6 +68,10 @@ if !has("gui_running")
 else
    nnoremap <c-space> viw
 endif
+" toggle search highlight (the tricky part is automatically re-enabling it on
+" new searches)
+let hlstate = 0
+nnoremap <leader><c-h> :if (hlstate%2 == 0) \| nohlsearch \| else \| set hlsearch \| endif \| let hlstate=hlstate+1<cr>
 
 " fix common typos (sweet)
 :iabbrev adn and
