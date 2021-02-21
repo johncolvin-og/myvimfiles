@@ -95,6 +95,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'arzg/vim-colors-xcode'
 Plug 'gisodal/vimgdb'
 Plug 'mitchpaulus/autocorrect.vim'
+Plug 'pmalek/toogle-maximize.vim'
 " Conque-GDB doesn't work with python>3.3
 " Plug 'vim-scripts/Conque-GDB'
 call plug#end()
