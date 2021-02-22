@@ -94,6 +94,7 @@ nnoremap <leader><c-e> :NERDTreeToggle<cr>
 Plug 'preservim/nerdcommenter'
 let g:NERDSpaceDelims = 1
 let g:NERDTrimTrailingWhitespace = 1
+Plug 'PhilRunninger/nerdtree-visual-selection'
 Plug 'vim-scripts/dbext.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'arzg/vim-colors-xcode'
