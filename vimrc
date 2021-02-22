@@ -72,6 +72,15 @@ endif
 " new searches)
 let hlstate = 0
 nnoremap <leader><c-h> :if (hlstate%2 == 0) \| nohlsearch \| else \| set hlsearch \| endif \| let hlstate=hlstate+1<cr>
+" Buffer/window management
+nnoremap <tab> :bn<cr>
+nnoremap <s-tab> :bp<cr>
+nnoremap <F5> <c-w>_<c-w><Bar>
+nnoremap <leader>b :buffers<cr>:buffer<space>
+nnoremap <c-s-j> :tabnext<cr>
+nnoremap <c-s-k> :tabprevious<cr>
+nnoremap <c-w>= <c-w>10>
+nnoremap <c-w>- <c-w>10<
 
 " fix common typos (sweet)
 :iabbrev adn and
