@@ -129,6 +129,7 @@ Plug 'mitchpaulus/autocorrect.vim'
 Plug 'pmalek/toogle-maximize.vim'
 Plug 'webdevel/tabulous'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'dag/vim-fish'
 Plug 'mhinz/vim-startify'
 " Conque-GDB doesn't work with python>3.3
 " Plug 'vim-scripts/Conque-GDB'
