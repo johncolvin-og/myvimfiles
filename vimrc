@@ -79,8 +79,24 @@ nnoremap <F5> <c-w>_<c-w><Bar>
 nnoremap <leader>b :buffers<cr>:buffer<space>
 nnoremap <c-s-j> :tabnext<cr>
 nnoremap <c-s-k> :tabprevious<cr>
-nnoremap <c-w>= <c-w>10>
-nnoremap <c-w>- <c-w>10<
+nnoremap <c-w>, <c-w><lt>
+nnoremap <c-w>. <c-w>>
+nnoremap <c-w>> <c-w>5>
+nnoremap <c-w><lt> <c-w>5<lt>
+" toggle search highlight (the tricky part is automatically re-enabling it on
+" new searches)
+let hlstate = 0
+nnoremap <leader><c-h> :if (hlstate%2 == 0) \| nohlsearch \| else \| set hlsearch \| endif \| let hlstate=hlstate+1<cr>
+
+" select word with <c-space>
+if !has("gui_running")
+   " Konsole interprets <c-space> as <c-@> for some reason
+   nnoremap <c-@> viw
+else
+   nnoremap <c-space> viw
+endif
+" Enter inserts new line in normal mode
+nnoremap <Enter> o<Esc>
 
 " fix common typos (sweet)
 :iabbrev adn and
