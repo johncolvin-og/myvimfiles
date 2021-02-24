@@ -27,6 +27,9 @@ let g:termdebug_wide = 163
 
 filetype plugin on
 
+if &shell =~# 'fish$'
+   set shell=bash
+endif
 if &term =~ '^xterm' || &term =~'^screen'
   " Normal Mode: solid block
   let &t_EI .= "\<Esc>[2 q"
