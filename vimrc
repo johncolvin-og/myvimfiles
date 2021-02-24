@@ -19,6 +19,7 @@ set t_vb=
 " for some reason, need to set ignorecase before smartcase for it to work
 set ignorecase
 set smartcase
+set cursorline
 
 let g:python_highlight_all = 1
 let g:termdebug_popup = 0
