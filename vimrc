@@ -131,3 +131,5 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Conque-GDB doesn't work with python>3.3
 " Plug 'vim-scripts/Conque-GDB'
 call plug#end()
+
+colorscheme xcodedark
