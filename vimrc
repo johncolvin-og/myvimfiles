@@ -83,10 +83,12 @@ nnoremap <F5> <c-w>_<c-w><Bar>
 nnoremap <leader>b :buffers<cr>:buffer<space>
 nnoremap <c-s-j> :tabnext<cr>
 nnoremap <c-s-k> :tabprevious<cr>
-nnoremap <c-w>, <c-w><lt>
-nnoremap <c-w>. <c-w>>
-nnoremap <c-w>> <c-w>5>
-nnoremap <c-w><lt> <c-w>5<lt>
+" Make resizing windows a little easier
+" nnoremap <c-w>, <c-w><lt>
+" nnoremap <c-w>. <c-w>>
+" nnoremap <c-w>> <c-w>5>
+" nnoremap <c-w><lt> <c-w>5<lt>
+
 " toggle search highlight (the tricky part is automatically re-enabling it on
 " new searches)
 let hlstate = 0
