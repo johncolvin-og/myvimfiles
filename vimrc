@@ -21,6 +21,7 @@ set ignorecase
 set smartcase
 set cursorline
 
+let g:default_code_text_width = 78
 let g:python_highlight_all = 1
 let g:termdebug_popup = 0
 let g:termdebug_wide = 163
@@ -46,7 +47,7 @@ autocmd Filetype h setlocal tabstop=3 | setlocal expandtab
 autocmd Filetype py setlocal tabstop=4 | setlocal shiftwidth=4 | setlocal expandtab
 autocmd Filetype json setlocal tabstop=2 | setlocal shiftwidth=2 | setlocal expandtab
 autocmd BufNewFile,BufRead cgdbrc setlocal syntax=vim
-autocmd Filetype sh setlocal tabstop=2 | setlocal shiftwidth=2 | setlocal expandtab
+autocmd Filetype sh setlocal tabstop=2 | setlocal shiftwidth=2 | setlocal expandtab | let &textwidth=g:default_code_text_width
 autocmd Filetype xml setlocal tabstop=2 | setlocal shiftwidth=2 | setlocal expandtab
 autocmd Filetype protobuf setlocal tabstop=2 | setlocal shiftwidth=2 | setlocal expandtab
 
