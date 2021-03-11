@@ -90,21 +90,6 @@ nnoremap <c-s-k> :tabprevious<cr>
 " nnoremap <c-w>> <c-w>5>
 " nnoremap <c-w><lt> <c-w>5<lt>
 
-" toggle search highlight (the tricky part is automatically re-enabling it on
-" new searches)
-let hlstate = 0
-nnoremap <leader><c-h> :if (hlstate%2 == 0) \| nohlsearch \| else \| set hlsearch \| endif \| let hlstate=hlstate+1<cr>
-
-" select word with <c-space>
-if !has("gui_running")
-   " Konsole interprets <c-space> as <c-@> for some reason
-   nnoremap <c-@> viw
-else
-   nnoremap <c-space> viw
-endif
-" Enter inserts new line in normal mode
-nnoremap <Enter> o<Esc>
-
 " Commands
 " see https://vim.fandom.com/wiki/Diff_current_buffer_and_the_original_file
 function! s:DiffWithSaved()
