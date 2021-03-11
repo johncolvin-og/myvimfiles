@@ -91,6 +91,16 @@ nnoremap <c-s-k> :tabprevious<cr>
 " nnoremap <c-w>> <c-w>5>
 " nnoremap <c-w><lt> <c-w>5<lt>
 nnoremap <c-q> q:
+" Insert mode navigation
+inoremap <c-h> <Left>
+inoremap <c-b> <c-Left>
+inoremap <c-j> <Down>
+inoremap <c-k> <Up>
+inoremap <c-l> <Right>
+inoremap <c-w> <c-Right>
+" Insert mode editing
+inoremap <c-n> <Del>
+inoremap <c-p> <BS>
 
 " Commands
 " see https://vim.fandom.com/wiki/Diff_current_buffer_and_the_original_file
