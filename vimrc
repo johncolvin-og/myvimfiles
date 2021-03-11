@@ -48,6 +48,7 @@ autocmd Filetype py setlocal tabstop=4 | setlocal shiftwidth=4 | setlocal expand
 autocmd Filetype json setlocal tabstop=2 | setlocal shiftwidth=2 | setlocal expandtab
 autocmd BufNewFile,BufRead cgdbrc setlocal syntax=vim
 autocmd Filetype sh setlocal tabstop=2 | setlocal shiftwidth=2 | setlocal expandtab | let &textwidth=g:default_code_text_width
+autocmd Filetype vim setlocal tabstop=4 | setlocal shiftwidth=4 | setlocal expandtab
 autocmd Filetype xml setlocal tabstop=2 | setlocal shiftwidth=2 | setlocal expandtab
 autocmd Filetype protobuf setlocal tabstop=2 | setlocal shiftwidth=2 | setlocal expandtab
 
