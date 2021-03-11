@@ -89,6 +89,7 @@ nnoremap <c-s-k> :tabprevious<cr>
 " nnoremap <c-w>. <c-w>>
 " nnoremap <c-w>> <c-w>5>
 " nnoremap <c-w><lt> <c-w>5<lt>
+nnoremap <c-q> q:
 
 " Commands
 " see https://vim.fandom.com/wiki/Diff_current_buffer_and_the_original_file
