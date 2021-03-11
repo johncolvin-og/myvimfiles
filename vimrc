@@ -145,6 +145,8 @@ Plug 'webdevel/tabulous'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'dag/vim-fish'
 Plug 'mhinz/vim-startify'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-notes'
 " Conque-GDB doesn't work with python>3.3
 " Plug 'vim-scripts/Conque-GDB'
 call plug#end()
