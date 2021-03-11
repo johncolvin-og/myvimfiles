@@ -29,15 +29,15 @@ let g:termdebug_wide = 163
 filetype plugin on
 
 if &shell =~# 'fish$'
-   set shell=bash
+    set shell=bash
 endif
 if &term =~ '^xterm' || &term =~'^screen'
-  " Normal Mode: solid block
-  let &t_EI .= "\<Esc>[2 q"
-  " Replace Mode: blinking block
-  let &t_SR .= "\<Esc>[1 q"
-  " Insert Mode: blinking vertical bar
-  let &t_SI .= "\<Esc>[5 q"
+    " Normal Mode: solid block
+    let &t_EI .= "\<Esc>[2 q"
+    " Replace Mode: blinking block
+    let &t_SR .= "\<Esc>[1 q"
+    " Insert Mode: blinking vertical bar
+    let &t_SI .= "\<Esc>[5 q"
 endif
 
 autocmd Filetype cs setlocal tabstop=3 | setlocal expandtab
@@ -68,10 +68,10 @@ vmap <c-o> :only
 nnoremap <Enter> o<Esc>
 " select word with <c-space>
 if !has("gui_running")
-   " Konsole interprets <c-space> as <c-@> for some reason
-   nnoremap <c-@> viw
+    " Konsole interprets <c-space> as <c-@> for some reason
+    nnoremap <c-@> viw
 else
-   nnoremap <c-space> viw
+    nnoremap <c-space> viw
 endif
 " toggle search highlight (the tricky part is automatically re-enabling it on
 " new searches)
@@ -94,11 +94,11 @@ nnoremap <c-q> q:
 " Commands
 " see https://vim.fandom.com/wiki/Diff_current_buffer_and_the_original_file
 function! s:DiffWithSaved()
-   let filetype=&ft
-   diffthis
-   vnew | r # | normal! 1Gdd
-   diffthis
-   exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+    let filetype=&ft
+    diffthis
+    vnew | r # | normal! 1Gdd
+    diffthis
+    exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
 command! DiffSaved call s:DiffWithSaved()
 
