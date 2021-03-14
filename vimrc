@@ -79,7 +79,6 @@ endif
 let hlstate = 0
 nnoremap <leader><c-h> :if (hlstate%2 == 0) \| nohlsearch \| else \| set hlsearch \| endif \| let hlstate=hlstate+1<cr>
 " Buffer/window management
-nnoremap <tab> :bn<cr>
 nnoremap <s-tab> :bp<cr>
 nnoremap <F5> <c-w>_<c-w><Bar>
 nnoremap <leader>b :buffers<cr>:buffer<space>
