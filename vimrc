@@ -147,9 +147,11 @@ Plug 'mhinz/vim-startify'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
 Plug 'tpope/vim-surround'
-Plug 'sirver/ultisnips'
-Plug 'honza/vim-snippets'
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "vim-snippets"]
+if !exists('g:vscode')
+    Plug 'sirver/ultisnips'
+    Plug 'honza/vim-snippets'
+    let g:UltiSnipsSnippetDirectories=["UltiSnips", "vim-snippets"]
+endif
 " Conque-GDB doesn't work with python>3.3
 " Plug 'vim-scripts/Conque-GDB'
 call plug#end()
