@@ -98,8 +98,10 @@ inoremap <c-k> <Up>
 inoremap <c-l> <Right>
 inoremap <c-w> <c-Right>
 " Insert mode editing
-inoremap <c-n> <Del>
-inoremap <c-p> <BS>
+" inoremap <c-n> <Del>
+" inoremap <c-p> <BS>
+inoremap <expr> <c-n> pumvisible() ? "\<Down>" : "\<Del>"
+inoremap <expr> <c-p> pumvisible() ? "\<Up>" : "\<BS>"
 
 " Commands
 " see https://vim.fandom.com/wiki/Diff_current_buffer_and_the_original_file
