@@ -88,6 +88,32 @@ nnoremap <leader><c-a> a<cr><Up><End>
 nnoremap <leader><c-s-a> a<cr><Up><End><cr>
 nnoremap <s-k> 0i<Bs><Esc>
 nnoremap <c-s-/> <s-k>
+" Delete/Change after cursor in (),{},[] groups (technically, it forward
+" searches for a closing parenthesis, and deletes everything in its path)
+nnoremap da) v])hx
+nnoremap da( v])hx
+nnoremap ca) v])hc
+nnoremap ca( v])hc
+
+nnoremap da} d]}hx
+nnoremap da{ v]}hx
+nnoremap ca} v]}hc
+nnoremap ca{ v]}hc
+
+nnoremap da] v]]hx
+nnoremap da[ v]]hx
+nnoremap ca] v]]hc
+nnoremap ca[ v]]hc
+
+nnoremap da} d]\"hx
+nnoremap da{ v]\"hx
+nnoremap ca} v]\"hc
+nnoremap ca{ v]\"hc
+
+nnoremap da} d]>hx
+nnoremap da{ v]>hx
+nnoremap ca} v]>hc
+nnoremap ca{ v]>hc
 " Make resizing windows a little easier
 " nnoremap <c-w>, <c-w><lt>
 " nnoremap <c-w>. <c-w>>
