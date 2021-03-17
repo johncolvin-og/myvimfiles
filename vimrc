@@ -84,6 +84,10 @@ nnoremap <F5> <c-w>_<c-w><Bar>
 nnoremap <leader>b :buffers<cr>:buffer<space>
 nnoremap <c-s-j> :tabnext<cr>
 nnoremap <c-s-k> :tabprevious<cr>
+nnoremap <leader><c-a> a<cr><Up><End>
+nnoremap <leader><c-s-a> a<cr><Up><End><cr>
+nnoremap <s-k> 0i<Bs><Esc>
+nnoremap <c-s-/> <s-k>
 " Make resizing windows a little easier
 " nnoremap <c-w>, <c-w><lt>
 " nnoremap <c-w>. <c-w>>
