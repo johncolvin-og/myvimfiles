@@ -1,0 +1,5 @@
+snippet fun "Function definition (custom)" b
+function ${1:`!v empty(expand('%')) ? 'name' : expand('%:t:r')`} -d "$3"
+   $0
+end
+endsnippet
