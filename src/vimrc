@@ -169,6 +169,7 @@ Plug 'mhinz/vim-startify'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 if !exists('g:vscode')
     Plug 'sirver/ultisnips'
     Plug 'honza/vim-snippets'
