@@ -168,7 +168,6 @@ let g:NERDTrimTrailingWhitespace = 1
 Plug 'PhilRunninger/nerdtree-visual-selection'
 Plug 'vim-scripts/dbext.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'arzg/vim-colors-xcode'
 Plug 'gisodal/vimgdb'
 Plug 'mitchpaulus/autocorrect.vim'
 Plug 'pmalek/toogle-maximize.vim'
@@ -186,6 +185,9 @@ if !exists('g:vscode')
     " The default <c-tab> works in gvim, but not in the terminal
     let g:UltiSnipsListSnippets='<c-s-l>'
 endif
+" colorschemes
+Plug 'arzg/vim-colors-xcode'
+Plug 'tomasr/molokai'
 " Conque-GDB doesn't work with python>3.3
 " Plug 'vim-scripts/Conque-GDB'
 call plug#end()
