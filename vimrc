@@ -173,6 +173,8 @@ if !exists('g:vscode')
     Plug 'sirver/ultisnips'
     Plug 'honza/vim-snippets'
     let g:UltiSnipsSnippetDirectories=["UltiSnips", "vim-snippets"]
+    " The default <c-tab> works in gvim, but not in the terminal
+    let g:UltiSnipsListSnippets='<c-s-l>'
 endif
 " Conque-GDB doesn't work with python>3.3
 " Plug 'vim-scripts/Conque-GDB'
