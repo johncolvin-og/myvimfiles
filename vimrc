@@ -184,6 +184,8 @@ if !exists('g:vscode')
     let g:UltiSnipsSnippetDirectories=["UltiSnips", "vim-snippets"]
     " The default <c-tab> works in gvim, but not in the terminal
     let g:UltiSnipsListSnippets='<c-s-l>'
+    let g:UltiSnipsJumpForwardTrigger='<tab>'
+    let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 endif
 " colorschemes
 Plug 'arzg/vim-colors-xcode'
