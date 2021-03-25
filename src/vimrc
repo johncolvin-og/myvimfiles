@@ -40,18 +40,24 @@ if &term =~ '^xterm' || &term =~'^screen'
     let &t_SI .= "\<Esc>[5 q"
 endif
 
-autocmd Filetype cs setlocal tabstop=3 | setlocal expandtab
-autocmd Filetype cpp setlocal tabstop=3 | setlocal expandtab
-autocmd Filetype cpp nnoremap <buffer> <C-k> :call CommentCpp()<Cr>
-autocmd Filetype h setlocal tabstop=3 | setlocal expandtab
-autocmd Filetype py setlocal tabstop=4 | setlocal shiftwidth=4 | setlocal expandtab
-autocmd Filetype json setlocal tabstop=2 | setlocal shiftwidth=2 | setlocal expandtab
+function SetIndentation(size, expand_tab = v:true)
+    let &l:tabstop=a:size
+    let &l:shiftwidth=a:size
+    " let &l:expandtab=!a:expand_tab
+    let &l:expandtab=a:expand_tab
+endfunction
+
+autocmd Filetype cs :call SetIndentation(3)
+autocmd Filetype cpp :call SetIndentation(3) nnoremap <buffer> <C-k> :call CommentCpp()<Cr>
+autocmd Filetype h :call SetIndentation(3)
+autocmd Filetype py :call SetIndentation(4)
+autocmd Filetype json :call SetIndentation(2)
 autocmd BufNewFile,BufRead cgdbrc setlocal syntax=vim
-autocmd Filetype sh setlocal tabstop=2 | setlocal shiftwidth=2 | setlocal expandtab | let &textwidth=g:default_code_text_width
-autocmd FileType snippets setlocal tabstop=3 | setlocal shiftwidth=3 | setlocal expandtab
-autocmd Filetype vim setlocal tabstop=4 | setlocal shiftwidth=4 | setlocal expandtab
-autocmd Filetype xml setlocal tabstop=2 | setlocal shiftwidth=2 | setlocal expandtab
-autocmd Filetype protobuf setlocal tabstop=2 | setlocal shiftwidth=2 | setlocal expandtab
+autocmd Filetype sh :call SetIndentation(2) | let &textwidth=g:default_code_text_width
+autocmd FileType snippets :call SetIndentation(3)
+autocmd Filetype vim :call SetIndentation(4)
+autocmd Filetype xml :call SetIndentation(2)
+autocmd Filetype protobuf :call SetIndentation(2)
 
 " syntax mappings
 autocmd BufRead,BufNewFile *.proto set filetype=protobuf
