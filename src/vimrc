@@ -116,6 +116,16 @@ nnoremap da] v]]hx
 nnoremap da[ v]]hx
 nnoremap ca] v]]hc
 nnoremap ca[ v]]hc
+
+nnoremap da} d]\"hx
+nnoremap da{ v]\"hx
+nnoremap ca} v]\"hc
+nnoremap ca{ v]\"hc
+
+nnoremap da} d]>hx
+nnoremap da{ v]>hx
+nnoremap ca} v]>hc
+nnoremap ca{ v]>hc
 " Make resizing windows a little easier
 " nnoremap <c-w>, <c-w><lt>
 " nnoremap <c-w>. <c-w>>
