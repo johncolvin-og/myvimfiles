@@ -196,6 +196,7 @@ if !exists('g:vscode')
     let g:UltiSnipsJumpForwardTrigger='<tab>'
     let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 endif
+Plug 'davidhalter/jedi-vim'
 " colorschemes
 Plug 'arzg/vim-colors-xcode'
 Plug 'tomasr/molokai'
