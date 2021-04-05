@@ -201,6 +201,7 @@ if !exists('g:vscode')
     let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 endif
 Plug 'davidhalter/jedi-vim'
+nnoremap <F2> :call jedi#rename()<cr>
 " colorschemes
 Plug 'arzg/vim-colors-xcode'
 Plug 'tomasr/molokai'
