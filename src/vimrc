@@ -202,6 +202,7 @@ if !exists('g:vscode')
 endif
 Plug 'davidhalter/jedi-vim'
 nnoremap <F2> :call jedi#rename()<cr>
+Plug 'vimjas/vim-python-pep8-indent'
 " colorschemes
 Plug 'arzg/vim-colors-xcode'
 Plug 'tomasr/molokai'
