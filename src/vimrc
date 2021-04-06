@@ -50,6 +50,7 @@ endfunction
 autocmd Filetype cs :call SetIndentation(3)
 autocmd Filetype cpp :call SetIndentation(3) nnoremap <buffer> <C-k> :call CommentCpp()<Cr>
 autocmd Filetype h :call SetIndentation(3)
+autocmd Filetype fish :call SetIndentation(4)
 autocmd Filetype py :call SetIndentation(4)
 autocmd Filetype python :call SetIndentation(4)
 autocmd Filetype json :call SetIndentation(2)
