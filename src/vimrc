@@ -102,29 +102,30 @@ nnoremap <c-s-/> <s-k>
 " Delete/Change after cursor in (),{},[] groups (technically, it forward
 " searches for a closing parenthesis, and deletes everything in its path)
 nnoremap da) v])hx
-nnoremap da( v])hx
+nnoremap da( v[(hx
 nnoremap ca) v])hc
-nnoremap ca( v])hc
+nnoremap ca( v[(hc
 
-nnoremap da} d]}hx
-nnoremap da{ v]}hx
+nnoremap da} v]}hx
+nnoremap da{ v[{lx
 nnoremap ca} v]}hc
-nnoremap ca{ v]}hc
+nnoremap ca{ v[{lc
 
-nnoremap da] v]]hx
-nnoremap da[ v]]hx
+nnoremap da] d]]hx
+nnoremap da[ v]]lx
 nnoremap ca] v]]hc
-nnoremap ca[ v]]hc
+nnoremap ca[ v]]lc
 
-nnoremap da} d]\"hx
-nnoremap da{ v]\"hx
-nnoremap ca} v]\"hc
-nnoremap ca{ v]\"hc
+nnoremap da" vf"hx
+nnoremap dA" vF"lx
+nnoremap ca" vf"hc
+nnoremap cA" vF"lc
 
-nnoremap da} d]>hx
-nnoremap da{ v]>hx
-nnoremap ca} v]>hc
-nnoremap ca{ v]>hc
+nnoremap da> vf>hx
+nnoremap da< vF<lx
+nnoremap ca> vf>hc
+nnoremap ca< vF<lc
+
 " Make resizing windows a little easier
 " nnoremap <c-w>, <c-w><lt>
 " nnoremap <c-w>. <c-w>>
