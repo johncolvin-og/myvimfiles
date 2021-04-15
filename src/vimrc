@@ -98,7 +98,7 @@ nnoremap <c-s-j> :tabnext<cr>
 nnoremap <c-s-k> :tabprevious<cr>
 nnoremap <leader><c-a> a<cr><Up><End>
 nnoremap <leader><c-s-a> a<cr><Up><End><cr>
-nnoremap <s-k> 0i<Bs><Esc>
+nnoremap <s-k> k<s-j>
 nnoremap <c-s-/> <s-k>
 " Delete/Change after cursor in (),{},[] groups (technically, it forward
 " searches for a closing parenthesis, and deletes everything in its path)
