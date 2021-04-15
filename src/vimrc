@@ -98,6 +98,7 @@ nnoremap <c-s-j> :tabnext<cr>
 nnoremap <c-s-k> :tabprevious<cr>
 nnoremap <leader><c-a> a<cr><Up><End>
 nnoremap <leader><c-s-a> a<cr><Up><End><cr>
+nnoremap <leader><s-k> <s-k>
 nnoremap <s-k> k<s-j>
 nnoremap <c-s-/> <s-k>
 " Delete/Change after cursor in (),{},[] groups (technically, it forward
