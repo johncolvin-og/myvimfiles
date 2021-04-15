@@ -9,6 +9,7 @@ set hlsearch
 set number
 set omnifunc=syntaxcomplete#Complete
 set shiftwidth=3
+set shortmess-=S
 set splitbelow
 set splitright
 set tabstop=3
