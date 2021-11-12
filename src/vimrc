@@ -70,6 +70,7 @@ autocmd BufRead,BufNewFile *.proto set filetype=protobuf
 autocmd BufRead,BufNewFile *.conf set filetype=protobuf
 autocmd BufRead,BufNewFile *Build.props set filetype=xml
 autocmd BufRead,BufNewFile *Build.targets set filetype=xml
+autocmd Filetype dockerfile set tabstop=4 | set shiftwidth=4 | set expandtab
 
 " Force cursor to be correct.  Vim only changes the cursor in response to mode
 " changes; the initial cursor is otherwise simply the active cursor in the
