@@ -105,19 +105,19 @@ nnoremap <c-s-/> <s-k>
 " Delete/Change after cursor in (),{},[] groups (technically, it forward
 " searches for a closing parenthesis, and deletes everything in its path)
 nnoremap da) v])hx
-nnoremap da( v[(hx
+nnoremap da( v])hx
 nnoremap ca) v])hc
-nnoremap ca( v[(hc
+nnoremap ca( v])hc
 
 nnoremap da} v]}hx
-nnoremap da{ v[{lx
+nnoremap da{ v]}hx
 nnoremap ca} v]}hc
-nnoremap ca{ v[{lc
+nnoremap ca{ v]}hc
 
-nnoremap da] d]]hx
-nnoremap da[ v]]lx
+nnoremap da] v]]hx
+nnoremap da[ v]]hx
 nnoremap ca] v]]hc
-nnoremap ca[ v]]lc
+nnoremap ca[ v]]hc
 
 nnoremap da" vf"hx
 nnoremap dA" vF"lx
