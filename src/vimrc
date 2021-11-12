@@ -64,6 +64,7 @@ autocmd FileType snippets :call SetIndentation(3)
 autocmd Filetype vim :call SetIndentation(4)
 autocmd Filetype xml :call SetIndentation(2)
 autocmd Filetype protobuf :call SetIndentation(2)
+autocmd Filetype dockerfile :call SetIndentation(4)
 
 " syntax mappings
 autocmd BufRead,BufNewFile *.proto set filetype=protobuf
