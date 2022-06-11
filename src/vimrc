@@ -159,7 +159,19 @@ inoremap <expr> <c-p> pumvisible() ? "\<Up>" : "\<BS>"
 "Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
+
 " Commands
+
+function! IsWSL()
+  if has("unix")
+    let lines = readfile("/proc/version")
+    if lines[0] =~ "Microsoft"
+      return 1
+    endif
+  endif
+  return 0
+endfunction
+
 " see https://vim.fandom.com/wiki/Diff_current_buffer_and_the_original_file
 function! s:DiffWithSaved()
     let filetype=&ft
@@ -169,6 +181,17 @@ function! s:DiffWithSaved()
     exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
 command! DiffSaved call s:DiffWithSaved()
+
+
+if IsWSL() == 1
+    let s:clip = '/mnt/c/Windows/System32/clip.exe'
+    if executable(s:clip)
+        augroup WSLYank
+            autocmd!
+            autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
+        augroup END
+    end
+endif
 
 " fix common typos (sweet)
 :iabbrev adn and
