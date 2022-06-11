@@ -238,14 +238,17 @@ Plug 'tpope/vim-surround'
 
 " Git utilities
 Plug 'tpope/vim-fugitive'
+
 if !exists('g:vscode')
-    Plug 'sirver/ultisnips'
     Plug 'honza/vim-snippets'
-    let g:UltiSnipsSnippetDirectories=["UltiSnips", "vim-snippets"]
-    " The default <c-tab> works in gvim, but not in the terminal
-    let g:UltiSnipsListSnippets='<c-s-l>'
-    let g:UltiSnipsJumpForwardTrigger='<tab>'
-    let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+    if has('python3')
+        Plug 'sirver/ultisnips'
+        let g:UltiSnipsSnippetDirectories=["UltiSnips", "vim-snippets"]
+        " The default <c-tab> works in gvim, but not in the terminal
+        let g:UltiSnipsListSnippets='<c-s-l>'
+        let g:UltiSnipsJumpForwardTrigger='<tab>'
+        let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+    endif
 endif
 
 " python auto-completion
