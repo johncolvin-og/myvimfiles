@@ -123,6 +123,11 @@ nnoremap da[ v]]hx
 nnoremap ca] v]]hc
 nnoremap ca[ v]]hc
 
+nnoremap da' vf'hx
+nnoremap dA' vF'lx
+nnoremap ca' vf'hc
+nnoremap cA' vF'lc
+
 nnoremap da" vf"hx
 nnoremap dA" vF"lx
 nnoremap ca" vf"hc
