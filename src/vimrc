@@ -62,6 +62,7 @@ autocmd BufNewFile,BufRead cgdbrc setlocal syntax=vim
 " Bash Style Guide: http://lug.fh-swf.de/vim/vim-bash/StyleGuideShell.en.pdf
 autocmd Filetype sh :call SetIndentation(2) | let textwidth=88
 autocmd FileType snippets :call SetIndentation(3)
+autocmd FileType text set textwidth=100
 autocmd Filetype vim :call SetIndentation(4)
 autocmd Filetype xml :call SetIndentation(2)
 autocmd Filetype protobuf :call SetIndentation(2)
