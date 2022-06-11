@@ -156,6 +156,8 @@ inoremap <c-w> <c-Right>
 " inoremap <c-p> <BS>
 inoremap <expr> <c-n> pumvisible() ? "\<Down>" : "\<Del>"
 inoremap <expr> <c-p> pumvisible() ? "\<Up>" : "\<BS>"
+"Remove all trailing whitespace by pressing F5
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 " Commands
 " see https://vim.fandom.com/wiki/Diff_current_buffer_and_the_original_file
