@@ -273,6 +273,9 @@ Plug 'tomtom/tlib_vim'
 " Plug 'itchyny/dictionary.vim'
 Plug 'farconics/victionary'
 
+" Grammatical and sophisticated editing support (for normal writing)
+Plug 'reedes/vim-wordy'
+
 Plug 'vimwiki/vimwiki'
 " let g:vimwiki_list = [{ 'path': '~/Documents/vimwiki/', 'name': 'main_wiki', 'auto_export': 0, 'auto_toc': 0, 'template_path': '~/Documents/vimwiki/templates/' }]
 let g:vimwiki_list = [{
