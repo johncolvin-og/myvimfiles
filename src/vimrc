@@ -232,6 +232,8 @@ Plug 'dag/vim-fish'
 Plug 'mhinz/vim-startify'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
+Plug 'xolox/vim-session'
+let g:session_autosave = 'no'
 Plug 'tpope/vim-surround'
 
 " Git utilities
