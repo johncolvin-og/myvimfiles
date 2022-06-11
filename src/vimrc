@@ -233,6 +233,11 @@ Plug 'arzg/vim-colors-xcode'
 Plug 'tomasr/molokai'
 " Conque-GDB doesn't work with python>3.3
 " Plug 'vim-scripts/Conque-GDB'
+
+" Dictionary
+" below only works for mac
+" Plug 'itchyny/dictionary.vim'
+Plug 'farconics/victionary'
 call plug#end()
 
 colorscheme xcodedark
