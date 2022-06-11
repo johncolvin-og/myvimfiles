@@ -272,6 +272,16 @@ Plug 'tomtom/tlib_vim'
 " below only works for mac
 " Plug 'itchyny/dictionary.vim'
 Plug 'farconics/victionary'
+
+Plug 'vimwiki/vimwiki'
+" let g:vimwiki_list = [{ 'path': '~/Documents/vimwiki/', 'name': 'main_wiki', 'auto_export': 0, 'auto_toc': 0, 'template_path': '~/Documents/vimwiki/templates/' }]
+let g:vimwiki_list = [{
+\    'path': '~/Documents/vimwiki/',
+\    'name': 'main_wiki',
+\    'auto_export': 1,
+\    'auto_toc': 1,
+\    'template_path': '~/Documents/vimwiki/templates/'}]
+
 call plug#end()
 
 colorscheme xcodedark
