@@ -201,12 +201,17 @@ Plug 'gisodal/vimgdb'
 Plug 'mitchpaulus/autocorrect.vim'
 Plug 'pmalek/toogle-maximize.vim'
 Plug 'webdevel/tabulous'
+
+" File search utilities (fuzzy matching)
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 Plug 'dag/vim-fish'
 Plug 'mhinz/vim-startify'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
 Plug 'tpope/vim-surround'
+
+" Git utilities
 Plug 'tpope/vim-fugitive'
 if !exists('g:vscode')
     Plug 'sirver/ultisnips'
@@ -217,9 +222,12 @@ if !exists('g:vscode')
     let g:UltiSnipsJumpForwardTrigger='<tab>'
     let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 endif
+
+" python auto-completion
 Plug 'davidhalter/jedi-vim'
 nnoremap <F2> :call jedi#rename()<cr>
 Plug 'vimjas/vim-python-pep8-indent'
+
 " colorschemes
 Plug 'arzg/vim-colors-xcode'
 Plug 'tomasr/molokai'
