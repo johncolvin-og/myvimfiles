@@ -288,6 +288,9 @@ let g:vimwiki_list = [{
 \    'auto_toc': 1,
 \    'template_path': '~/Documents/vimwiki/templates/'}]
 
+" Utilities for table-style formatting
+Plug 'dhruvasagar/vim-table-mode'
+
 call plug#end()
 
 colorscheme xcodedark
