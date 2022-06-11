@@ -256,6 +256,9 @@ Plug 'davidhalter/jedi-vim'
 nnoremap <F2> :call jedi#rename()<cr>
 Plug 'vimjas/vim-python-pep8-indent'
 
+" json syntax highlighting
+Plug 'elzr/vim-json'
+
 " colorschemes
 Plug 'arzg/vim-colors-xcode'
 Plug 'tomasr/molokai'
