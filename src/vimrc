@@ -13,7 +13,7 @@ set shiftwidth=3
 set shortmess-=S
 set splitbelow
 set splitright
-set tabstop=3
+set tabstop=4
 set ttimeoutlen=100
 set visualbell
 " Set character code emitted for visualbell to null
