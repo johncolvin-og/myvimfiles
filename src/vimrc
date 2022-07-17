@@ -57,7 +57,7 @@ autocmd Filetype html :call SetIndentation(2)
 autocmd Filetype fish :call SetIndentation(4)
 autocmd Filetype py :call SetIndentation(4)
 autocmd Filetype python :call SetIndentation(4)
-autocmd Filetype json :call SetIndentation(2)
+autocmd Filetype json :call SetIndentation(2) | set conceallevel=0
 autocmd BufNewFile,BufRead cgdbrc setlocal syntax=vim
 " Bash Style Guide: http://lug.fh-swf.de/vim/vim-bash/StyleGuideShell.en.pdf
 autocmd Filetype sh :call SetIndentation(2) | let textwidth=88
