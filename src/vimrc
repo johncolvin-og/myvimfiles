@@ -50,17 +50,17 @@ function SetIndentation(size, expand_tab = v:true)
     let &l:expandtab=a:expand_tab
 endfunction
 
-autocmd Filetype cs :call SetIndentation(3)
-autocmd Filetype cpp :call SetIndentation(3)
-autocmd Filetype h :call SetIndentation(3)
+autocmd Filetype cs :call SetIndentation(3) | setlocal iskeyword-=/
+autocmd Filetype cpp :call SetIndentation(3) | setlocal iskeyword-=/
+autocmd Filetype h :call SetIndentation(3) | setlocal iskeyword-=/
 autocmd Filetype html :call SetIndentation(2)
-autocmd Filetype fish :call SetIndentation(4)
+autocmd Filetype fish :call SetIndentation(4) | setlocal iskeyword-=/
 autocmd Filetype py :call SetIndentation(4)
-autocmd Filetype python :call SetIndentation(4)
-autocmd Filetype json :call SetIndentation(2) | set conceallevel=0
+autocmd Filetype python :call SetIndentation(4) | setlocal iskeyword-=/
+autocmd Filetype json :call SetIndentation(2) | set conceallevel=0 | setlocal iskeyword-=/
 autocmd BufNewFile,BufRead cgdbrc setlocal syntax=vim
 " Bash Style Guide: http://lug.fh-swf.de/vim/vim-bash/StyleGuideShell.en.pdf
-autocmd Filetype sh :call SetIndentation(2) | let textwidth=88
+autocmd Filetype sh :call SetIndentation(2) | let textwidth=88 | setlocal iskeyword-=/
 autocmd FileType snippets :call SetIndentation(3)
 autocmd FileType text set textwidth=100
 autocmd Filetype vim :call SetIndentation(4)
