@@ -1,0 +1,23 @@
+""set runtimepath^=~/.vim runtimepath+=~/.vim/after
+""let &packpath = &runtimepath
+""source ~/.vimrc
+set tabstop=3
+set shiftwidth=3
+
+" for c# files...
+autocmd Filetype cs setlocal tabstop=3 | setlocal shiftwidth=3 | setlocal expandtab
+
+" for cpp files...
+autocmd Filetype cpp setlocal tabstop=3 | setlocal shiftwidth=3 | setlocal expandtab
+
+" for py files...
+autocmd Filetype py setlocal tabstop=4 | setlocal shiftwidth=4 | setlocal noexpandtab
+
+" for json files...
+autocmd Filetype json setlocal tabstop=2 | setlocal shitwidth=2 | setlocal expandtab
+
+nnoremap a i<Right>
+
+function! Heydickface()
+   echo "Fuck you"
+endfunc
