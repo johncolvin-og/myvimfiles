@@ -1,0 +1,93 @@
+syntax on
+set tabstop=3
+set shiftwidth=3
+set expandtab
+set number
+set backspace=indent,eol,start
+set autoindent
+set ttimeoutlen=100
+set background=dark
+set belloff=all
+set visualbell
+set hlsearch
+
+filetype plugin on
+" autocomplete
+set omnifunc=syntaxcomplete#Complete
+" searches are case insensitive unless upper case char in search text
+set smartcase
+" hi Visual ctermbg=7
+
+"if &term =~? "xterm" || &term =~? "rxvt"
+"   "autocmd VimEnter * let &t_me .= "\<Esc>[2 q"
+"   " blinking vertical bar
+"   let &t_SI = "\<Esc>[5 q"
+"   " blinking block
+" 	let &t_EI = "\<Esc>[3 q"
+" 
+" 	" restore cursor
+" 	" todo save instead of hard coding
+"   autocmd VimLeave * let &t_me = "\<Esc>[3 q"
+"endif
+
+"set guicursor+=n-v-c:blinkon0
+"if has("autocmd")
+"  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[1 q"' | redraw!
+"  au InsertEnter,InsertChange *
+"    \ if v:insertmode == 'i' |
+"    \   silent execute '!echo -ne "\e[5 q"' | redraw! |
+"    \ elseif v:insertmode == 'r' |
+"    \   silent execute '!echo -ne "\e[3 q"' | redraw! |
+"    \ endif
+"  au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+"endif
+
+"let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+"let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+"let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+
+if &term =~ '^xterm'
+  " solid underscore
+  let &t_SR .= "\<Esc>[5 q"
+  let &t_SI .= "\<Esc>[3 q"
+  " solid block
+  let &t_EI .= "\<Esc>[1 q"
+  " 1 or 0 -> blinking block
+  " 3 -> blinking underscore
+  " Recent versions of xterm (282 or above) also support
+  " 5 -> blinking vertical bar
+  " 6 -> solid vertical bar
+endif
+
+" for c# files...
+autocmd Filetype cs setlocal tabstop=3 | setlocal expandtab
+"autocmd Filetype cs setlocal map <c-t> :call Comm
+
+" for py files...
+autocmd Filetype py setlocal tabstop=4 | setlocal shiftwidth=4 | setlocal noexpandtab
+let g:python_highlight_all = 1
+
+" for json files...
+autocmd Filetype json setlocal tabstop=2 | setlocal shiftwidth=2 | setlocal expandtab
+
+function! Comment()
+	norm i#
+endfunc
+
+" fucking line endings (thanks markdown 10, you dickface)
+"set fileformats=unix
+
+"key mappings!!!
+":help map-which-keys --> will show you available/unused key-mappings (or vice versa, idk haven't tried it yet)
+
+"map <c-t> :call Comment() --> without the <cr>, you must hit Enter to execute command
+"map <c-t> :call Comment()<cr> --> this would work great, however that Comment() function is just to illustrate a point
+
+vmap <c-k> :call Comment()<cr>
+vmap <c-o> :only
+
+" syntax mappings
+autocmd BufRead,BufNewFile *Build.props set filetype=xml
+autocmd BufRead,BufNewFile *Build.targets set filetype=xml
+"autocmd BufWinEnter,WinEnter * if &buftype='terminal' | 
+
