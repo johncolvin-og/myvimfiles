@@ -1,0 +1,113 @@
+syntax on
+set tabstop=3
+set shiftwidth=3
+set expandtab
+set number
+set backspace=indent,eol,start
+set autoindent
+set ttimeoutlen=100
+set background=dark
+set visualbell
+set belloff=all
+set hlsearch
+
+filetype plugin on
+" autocomplete
+set omnifunc=syntaxcomplete#Complete
+" searches are case insensitive unless upper case char in search text
+set smartcase
+" hi Visual ctermbg=7
+
+if &term =~ '^xterm' || &term =~'^screen'
+  " Normal Mode: solid block
+  let &t_EI .= "\<Esc>[2 q"
+  " Replace Mode: blinking block
+  let &t_SR .= "\<Esc>[1 q"
+  " Insert Mode: blinking vertical bar
+  let &t_SI .= "\<Esc>[5 q"
+  " The 3 cursor settings below are worth exploring some day,
+  " not sure what exactly they mean tho...
+	"let &t_SI = "\<Esc>]12;purple\x7"
+	"let &t_SR = "\<Esc>]12;red\x7"
+	"let &t_EI = "\<Esc>]10;green\x7"
+  " 1 or 0 -> blinking block
+  " 3 -> blinking underscore
+  " Recent versions of xterm (282 or above) also support
+  " 5 -> blinking vertical bar
+  " 6 -> solid vertical bar
+endif
+
+" execute 'silent !touch /mnt/c/Users/johnc/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json &' | redraw!
+" silent! touch-windows-terminal-settings-file.sh
+" This restores the cursor shape set in the windows terminal settings.json
+" However, it causes an unfortunate blink, which just doesn't seem worth it.
+" I really like taht vintage underscore tho!  Damnit, so close!
+function! TouchWinTermSettingsPath()
+   :execute 'silent !touch /mnt/c/Users/johnc/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json &' | redraw!
+endfunc
+
+" for c# files...
+autocmd Filetype cs setlocal tabstop=3 | setlocal expandtab
+"autocmd Filetype cs setlocal map <c-t> :call Comm
+
+" for py files...
+autocmd Filetype py setlocal tabstop=4 | setlocal shiftwidth=4 | setlocal noexpandtab
+let g:python_highlight_all = 1
+
+" for json files...
+autocmd Filetype json setlocal tabstop=2 | setlocal shiftwidth=2 | setlocal expandtab
+
+"autocmd BufNewFile, BufRead *.* :normal | G
+autocmd VimEnter * :normal :startinsert : stopinsert
+
+function! Comment()
+	norm i#
+endfunc
+
+" fucking line endings (thanks markdown 10, you dickface)
+"set fileformats=unix
+
+"key mappings!!!
+":help map-which-keys --> will show you available/unused key-mappings (or vice versa, idk haven't tried it yet)
+
+"map <c-t> :call Comment() --> without the <cr>, you must hit Enter to execute command
+"map <c-t> :call Comment()<cr> --> this would work great, however that Comment() function is just to illustrate a point
+
+vmap <c-k> :call Comment()<cr>
+vmap <c-o> :only
+
+" copy (write) highlighted text to .vimbuffer
+vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
+" paste from buffer
+map <C-v> :r ~/.vimbuffer<CR>
+" prevent screen flicker on copy
+" autocmd TextYankPost * call system('echo' .shellescape(join(v:event.regcontents, "\<CR>")).' | clip.exe')
+
+"nnoremap <C-M-a> :echo "hello"<CR>
+
+function! InsertAfter()
+   "norm i
+   let cp = getcurpos()
+   "echo l:cp
+   let np = [l:cp[0], l:cp[1], l:cp[2] + 1, l:cp[3], l:cp[4]]
+   "echo l:np
+   call setpos(".", l:np)
+endfunc
+
+function! InsertBefore()
+   
+endfunc
+
+"nnoremap <C-M-a> :call InsertAfter()<CR>
+"nnoremap <S-Space> :call InsertBefore()<CR>
+nnoremap a i<Right>
+
+function! Heybud()
+   echo "Hey bud"
+endfunc
+
+" syntax mappings
+autocmd BufRead,BufNewFile *Build.props set filetype=xml
+autocmd BufRead,BufNewFile *Build.targets set filetype=xml
+"autocmd BufWinEnter,WinEnter * if &buftype='terminal' | 
+
